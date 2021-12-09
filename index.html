@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" >
-  <script>
-
-  </script>
 <head>
   <meta charset="UTF-8">
   <title>Redeem all Dragon Raja CD Keys in one click</title>
   <link rel="stylesheet" href="https://integratab.herokuapp.com/css/style">
-
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -15,7 +21,7 @@
     <h2>Dragon Raja Redeem</h2>
     <form action="/DragonRajaRedeem">
       <div class="user-box">
-        <input type="text" id="charID" name="charID" value="" autofocus>
+        <input type="number" oninput="validity.valid||(value='');" id="charID" name="charID" value="" autofocus>
         <label for="charID">Character ID</label>
       </div>
        <a href="javascript:myFunction();">
