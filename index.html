@@ -1,16 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <script>
+
+  </script>
+<head>
+  <meta charset="UTF-8">
+  <title>Redeem all Dragon Raja CD Keys in one click</title>
+  <link rel="stylesheet" href="https://integratab.herokuapp.com/css/style">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <div class="login-box">
     <h2>Dragon Raja Redeem</h2>
-    <form>
+    <form action="/DragonRajaRedeem">
       <div class="user-box">
-        <input type="text" id="charID" name="charID">
-        <label>Character ID</label>
+        <input type="text" id="charID" name="charID" value="" autofocus>
+        <label for="charID">Character ID</label>
       </div>
-      <a href="https://integratab.herokuapp.com/DragonRaja">
+       <a href="javascript:myFunction();">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         Submit
       </a>
-    </formaction>
-  </div> 
+    </form>
+  </div>
+<!-- partial -->
+<script>
+  function myFunction() {
+    if(document.getElementById("charID").value === "") return alert("Please input a valid character id!");
+  window.location.href = "https://integratab.herokuapp.com/DragonRajaRedeem?charID="+document.getElementById("charID").value;
+  }
+  </script>
+</body>
+</html>
