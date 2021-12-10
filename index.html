@@ -19,12 +19,12 @@
 <!-- partial:index.partial.html -->
 <div class="login-box">
     <h2>Dragon Raja Redeem</h2>
-    <form>
+    <form action="/DragonRajaRedeem">
       <div class="user-box">
         <input type="number" oninput="validity.valid||(value='');" id="charID" name="charID" value="" autofocus>
         <label for="charID">Character ID</label>
       </div>
-       <a id="submit" href="javascript:myFunction();">
+       <a href="javascript:redirect();">
         <span></span>
         <span></span>
         <span></span>
@@ -35,10 +35,14 @@
   </div>
 <!-- partial -->
 <script>
-  $( "submit" ).click(function( event ) {
-  event.preventDefault();
+  var submit = document.getElementById("charID")
+  submit.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   redirect();
+  }
 });
-  function myFunction() {
+  function redirect() {
     if(document.getElementById("charID").value === "") return alert("Please input a valid character id!");
   window.location.href = "https://integratab.herokuapp.com/DragonRajaRedeem?charID="+document.getElementById("charID").value;
   }
