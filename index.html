@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <title>Redeem all Dragon Raja CD Keys in one click</title>
   <link rel="stylesheet" href="https://integratab.herokuapp.com/css/style">
-<script>
-$( "submit" ).click(function( event ) {
-  event.preventDefault();
-});
   <style>
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -39,6 +35,9 @@ $( "submit" ).click(function( event ) {
   </div>
 <!-- partial -->
 <script>
+  $( "submit" ).click(function( event ) {
+  event.preventDefault();
+});
   function myFunction() {
     if(document.getElementById("charID").value === "") return alert("Please input a valid character id!");
   window.location.href = "https://integratab.herokuapp.com/DragonRajaRedeem?charID="+document.getElementById("charID").value;
