@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Redeem all Dragon Raja CD Keys in one click</title>
   <link rel="stylesheet" href="https://integratab.herokuapp.com/css/style">
+<script>
+$( "submit" ).click(function( event ) {
+  event.preventDefault();
+});
   <style>
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -24,7 +28,7 @@
         <input type="number" oninput="validity.valid||(value='');" id="charID" name="charID" value="" autofocus>
         <label for="charID">Character ID</label>
       </div>
-       <a href="e.preventDefault();" onclick="myFunction();">
+       <a id="submit" href="e.preventDefault();" onclick="myFunction();">
         <span></span>
         <span></span>
         <span></span>
